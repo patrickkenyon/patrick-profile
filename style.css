@@ -45,9 +45,22 @@ header {
     flex: 1 1 50%;
     max-width: 50%;
     color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .project1 {
     background-image: url("https://images.pexels.com/photos/1393996/pexels-photo-1393996.jpeg?auto=compress&cs=tinysrgb&h=350");
-    background-size: contain;
+}
+
+.project2 {
+    background-image: url("https://images.unsplash.com/photo-1536499657529-2d09e5c71539?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ccc131c58f5da1e893e2605dda9de842&auto=format&fit=crop&w=500&q=60");
+}
+
+.project3 {
+    background-image: url("https://images.unsplash.com/photo-1536506252322-a4cb9cae8655?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=79ac811fe55d39710f4d9d6cb2ac1d27&auto=format&fit=crop&w=500&q=60");
+}
+
+.project4 {
+    background-image: url("https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60");
 }

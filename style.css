@@ -10,3 +10,15 @@ header {
     display: flex;
     justify-content: space-around;
 }
+.mini-profile {
+    width: 100%;
+    text-align: center;
+}
+
+.project-holder {
+    display: flex;
+}
+
+.project {
+    width: 50%;
+}

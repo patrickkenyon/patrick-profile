@@ -9,11 +9,14 @@ html {
 
 body {
     width: 1200px;
+    margin: auto;
+    font-family: 'Inconsolata', monospace;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    background: ;
 }
 
 .logo {
@@ -69,8 +72,10 @@ header {
 
 .about-me-holder {
     display: flex;
+    justify-content: space-between;
 }
 
 .contact-info {
+    display: flex;
     flex-direction: column;
 }

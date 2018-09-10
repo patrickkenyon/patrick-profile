@@ -1,5 +1,6 @@
 * {
     border: red solid 1px;
+    box-sizing: border-box;
 }
 
 html {
@@ -16,7 +17,7 @@ header {
 }
 
 .logo {
-    
+
 }
 
 .main-nav {
@@ -34,10 +35,19 @@ header {
 .project-holder {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .project {
-    width: 25%;
-    flex-wrap: wrap;
     align-items: baseline;
+    flex: 1 1 50%;
+    max-width: 50%;
+    color: #fff;
+}
+
+.project1 {
+    background-image: url("https://images.pexels.com/photos/1393996/pexels-photo-1393996.jpeg?auto=compress&cs=tinysrgb&h=350");
+    background-size: contain;
 }

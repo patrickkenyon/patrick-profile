@@ -2,7 +2,11 @@ html {
     font-size: 62.5%;
 }
 
-head {
+body {
     width: 1200px;
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+}

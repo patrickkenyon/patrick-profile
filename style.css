@@ -12,6 +12,19 @@ body {
     width: 1200px;
     margin: auto;
     font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+}
+
+a {
+    color: #000;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 header {
@@ -19,11 +32,11 @@ header {
     display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
-    background: ;
+    background: #eaeaea;
+    padding: 2px;
 }
 
 .logo {
-
 }
 
 .main-nav {

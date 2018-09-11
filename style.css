@@ -94,6 +94,8 @@ header {
 .about-me-holder {
     display: flex;
     justify-content: space-between;
+    background: #eaeaea;
+    border: solid #000 1px;
 }
 
 .about-me {

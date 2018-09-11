@@ -37,9 +37,9 @@ header {
 
 .project-holder {
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
     text-align: center;
+    list-style: none;
 }
 
 .project {
@@ -48,6 +48,12 @@ header {
     background-size: cover;
     min-height: 300px;
     background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+        flex: 1 1 100%
+    }
 }
 
 .project1 {

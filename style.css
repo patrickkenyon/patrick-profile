@@ -1,15 +1,9 @@
-* {
-    border: red solid 1px;
-    box-sizing: border-box;
-}
-
 html {
     font-size: 62.5%;
     margin: 0;
 }
 
 body {
-    width: 1200px;
     margin: auto;
     font-family: 'Inconsolata', monospace;
     font-size: 14px;
@@ -34,16 +28,20 @@ header {
     justify-content: space-between;
     background: #eaeaea;
     padding: 2px;
+    border: solid #000 1px;
 }
 
 .logo {
+    width: 25%
 }
 
 .main-nav {
+    width: 25%
 }
 
 .side-nav {
-
+    width: 25%;
+    text-align: right;
 }
 
 .mini-profile {
@@ -66,11 +64,16 @@ header {
     background-position: center;
 }
 
+.project-over:hover {
+    background: rgba(0,0,0,0.3);
+    height:  100%;
+}
+
 @media only screen and (max-width: 600px) {
     .project {
         flex-shrink: 1;
         flex-grow: 1;
-        flex-basis: 100px;
+        flex-basis: 100%;
     }
 }
 
@@ -95,7 +98,11 @@ header {
     justify-content: space-between;
 }
 
+.about-me {
+    flex: 2 2 75%;
+}
+
 .contact-info {
-    display: flex;
-    flex-direction: column;
+    flex: 1 1 25%;
+
 }

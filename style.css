@@ -1,7 +1,7 @@
 * {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
-    border: 1px solid black;
+
 }
 
 html {
@@ -63,6 +63,7 @@ header {
 .mini-profile {
     width: 100%;
     text-align: center;
+    border: solid #000 1px;
 }
 
 .project-holder {
@@ -79,21 +80,23 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
     -webkit-box-pack: center;
-
     -ms-flex-pack: center;
-
     justify-content: center;
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 50%;
-    flex: 1 1 50%;
+    flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 100%;
     color: #fff;
     background-size: cover;
     min-height: 300px;
     background-position: center;
     position: relative;
     padding: 0 100px 0 100px;
+    border: solid #000 1px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -146,6 +149,8 @@ header {
 .about-me-holder:after {
     width: 100%;
     clear: both;
+    display: block;
+    content: ' ';
 }
 
 @media only screen and (max-width: 600px) {

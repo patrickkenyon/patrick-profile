@@ -33,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     background: #eaeaea;
-    padding: 2px;
+    padding: 4px;
     border: solid #000 1px;
 }
 
@@ -44,7 +44,7 @@ header {
         display: flex;
         justify-content: center;
         background: #eaeaea;
-        padding: 2px;
+        padding: 4px;
         border: solid #000 1px;
     }
 }
@@ -114,10 +114,15 @@ header {
 }
 
 .about-me-holder {
-    display: flex;
-    justify-content: space-between;
+    display: block;
     background: #eaeaea;
     border: solid #000 1px;
+    padding: 0 4px 0 4px;
+}
+
+.about-me-holder:after {
+    width: 100%;
+    clear: both;
 }
 
 @media only screen and (max-width: 600px) {
@@ -130,10 +135,26 @@ header {
 }
 
 .about-me {
-    flex: 2 2 75%;
+   float: left;
 }
 
 .contact-info {
-    flex: 1 1 25%;
+    float: right;
+}
 
+@media only screen and (max-width: 845px) {
+    .about-me {
+        margin: auto;
+        float: none;
+        text-align: center;
+        padding: 0 4px 0 4px;
+    }
+}
+
+@media only screen and (max-width: 845px) {
+    .contact-info {
+        margin: auto;
+        float: none;
+        text-align: center;
+    }
 }

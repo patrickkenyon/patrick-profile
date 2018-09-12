@@ -118,6 +118,7 @@ header {
     background: #eaeaea;
     border: solid #000 1px;
     padding: 0 4px 0 4px;
+    height: 100%;
 }
 
 .about-me-holder:after {

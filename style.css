@@ -1,5 +1,6 @@
 * {
     box-sizing:border-box;
+    border: 1px solid black;
 }
 
 html {
@@ -62,6 +63,7 @@ header {
     min-height: 300px;
     background-position: center;
     position: relative;
+    padding: 0 100px 0 100px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -78,8 +80,10 @@ header {
     width: 100%;
     color: rgba(212,175,55,1);
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    padding: 0 100px 0 100px;
+    transform: translate(0, -25%);
 }
 
 .project1 {
@@ -103,6 +107,15 @@ header {
     justify-content: space-between;
     background: #eaeaea;
     border: solid #000 1px;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-me-holder {
+        display: block;
+        justify-content: space-between;
+        background: #eaeaea;
+        border: solid #000 1px;
+    }
 }
 
 .about-me {

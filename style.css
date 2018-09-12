@@ -38,6 +38,9 @@ header {
     background: #eaeaea;
     padding: 4px;
     border: solid #000 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 @media only screen and (max-width: 600px) {

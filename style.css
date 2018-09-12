@@ -39,11 +39,14 @@ header {
     padding: 4px;
     border: solid #000 1px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100000;
     width: 100%;
+=======
+>>>>>>> parent of 0428111... made position absolute to viewport
 =======
 >>>>>>> parent of 0428111... made position absolute to viewport
 }

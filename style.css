@@ -55,7 +55,7 @@ header {
 
 .project {
     display: flex;
-    align-items: center;
+
     justify-content: center;
     flex: 1 1 50%;
     color: #fff;
@@ -80,10 +80,9 @@ header {
     width: 100%;
     color: rgba(212,175,55,1);
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     padding: 0 100px 0 100px;
-    transform: translate(0, -25%);
 }
 
 .project1 {

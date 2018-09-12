@@ -74,7 +74,7 @@ header {
     flex-grow: 1;
     -ms-flex-positive: 1;
     flex-basis: 50%;
-    -ms-flex-preferred-size: 50%;
+    -ms-flex-preferred-size: 25%;
     color: #fff;
     background-image: url("https://placekitten.com/700/300");
     background-size: cover;

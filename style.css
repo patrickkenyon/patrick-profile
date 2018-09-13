@@ -46,7 +46,6 @@ header {
 }
 
 .mini-profile {
-    width: 100%;
     text-align: center;
     border: solid #000 1px;
 }
@@ -81,7 +80,7 @@ header {
     min-height: 300px;
     background-position: center;
     position: relative;
-    padding: 0 100px 0 100px;
+    padding: 0 100px;
 }
 
 .project:hover .project-over {
@@ -92,7 +91,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 100px 0 100px;
+    padding: 0 100px;
 }
 
 .project1 {

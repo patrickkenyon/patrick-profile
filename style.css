@@ -36,7 +36,7 @@ header {
     -ms-flex-pack: justify;
     justify-content: space-between;
     background: #eaeaea;
-    padding: 4px;
+    padding: 5px 10px;
     border: solid #000 1px;
 }
 

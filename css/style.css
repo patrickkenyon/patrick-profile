@@ -1,6 +1,7 @@
 * {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
+    border: black solid 1px;
 }
 
 html {
@@ -48,8 +49,6 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: stretch;
 }
 
 .mini-profile {
@@ -60,6 +59,7 @@ header {
 
 .mini-profile p {
     line-height: 17px;
+    margin: 10px 5%;
 }
 
 .project-holder {
@@ -92,7 +92,7 @@ header {
     min-height: 300px;
     background-position: center;
     position: relative;
-    padding: 0 100px;
+    padding: 0 15px;
     border: solid black 1px;
 }
 
@@ -104,7 +104,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 100px;
+    padding: 0 15px;
 }
 
 .project1 {
@@ -150,21 +150,6 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-    .about-me {
-        margin: auto;
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
-    .contact-info {
-        margin: auto;
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 600px) {
     header {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -192,5 +177,17 @@ header {
         justify-content: space-between;
         background: #eaeaea;
         border: solid #000 1px;
+    }
+    .about-me {
+        margin: auto;
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .contact-info {
+        margin: auto;
+        width: 100%;
+        float: none;
+        text-align: center;
     }
 }

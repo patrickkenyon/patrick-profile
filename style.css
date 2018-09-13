@@ -1,7 +1,6 @@
 * {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
-    border: black solid 1px;
 }
 
 html {
@@ -49,6 +48,11 @@ header {
 .mini-profile {
     text-align: center;
     border: solid #000 1px;
+    padding: 0 10px;
+}
+
+.mini-profile p {
+    line-height: 17px;
 }
 
 .project-holder {
@@ -117,6 +121,7 @@ header {
     border: solid #000 1px;
     padding: 5px 10px;
     height: 100%;
+    line-height: 17px;
 }
 
 .about-me-holder:after {
@@ -136,15 +141,16 @@ header {
     width: 270px;
 }
 
-@media only screen and (max-width: 845px) {
+@media only screen and (max-width: 600px) {
     .about-me {
         margin: auto;
+        width: 100%;
         float: none;
         text-align: center;
-        padding: 0 4px;
     }
     .contact-info {
         margin: auto;
+        width: 100%;
         float: none;
         text-align: center;
     }

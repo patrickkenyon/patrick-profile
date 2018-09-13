@@ -1,6 +1,7 @@
 * {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
+    border: black solid 1px;
 }
 
 html {
@@ -114,7 +115,7 @@ header {
     display: block;
     background: #eaeaea;
     border: solid #000 1px;
-    padding: 0 4px 0 4px;
+    padding: 5px 10px;
     height: 100%;
 }
 
@@ -127,10 +128,12 @@ header {
 
 .about-me {
     float: left;
+    width: calc(100% - 300px);
 }
 
 .contact-info {
     float: right;
+    width: 270px;
 }
 
 @media only screen and (max-width: 845px) {
@@ -138,7 +141,7 @@ header {
         margin: auto;
         float: none;
         text-align: center;
-        padding: 0 4px 0 4px;
+        padding: 0 4px;
     }
     .contact-info {
         margin: auto;

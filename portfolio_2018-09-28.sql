@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-09-28 13:52:38 +0000
+# Generation Time: 2018-09-28 14:19:40 +0000
 # ************************************************************
 
 
@@ -35,6 +35,15 @@ CREATE TABLE `about_me` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `about_me` WRITE;
+/*!40000 ALTER TABLE `about_me` DISABLE KEYS */;
+
+INSERT INTO `about_me` (`id`, `bio_header`, `bio`, `contact_header`, `email`, `telephone`)
+VALUES
+	(1,'About me','With a background in education and project management I have a strong communication and organisational skill set. I am currently cutting my teeth in the world of coding with Mayden Academy, a highly regarded coding academy based in Bath. Through personal study and my education with Mayden Academy I have experience of HTML5 and CSS.','Contact info.','patrick.kenyon@gmail.com','+447814742276');
+
+/*!40000 ALTER TABLE `about_me` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table content
@@ -50,6 +59,15 @@ CREATE TABLE `content` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `content` WRITE;
+/*!40000 ALTER TABLE `content` DISABLE KEYS */;
+
+INSERT INTO `content` (`id`, `name`, `sub_title`, `tagline`)
+VALUES
+	(1,'Patrick Kenyon','Trainee Full Stack developer','I am a fledgling developer at the start of my career, hungry to learn and to prove myself within a supportive company.');
+
+/*!40000 ALTER TABLE `content` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table projects
@@ -66,6 +84,24 @@ CREATE TABLE `projects` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `projects` WRITE;
+/*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+
+INSERT INTO `projects` (`id`, `title`, `mini_description`, `background_image`, `project_url`)
+VALUES
+	(1,'Example project','Here is a short desctiption of one of my projects.','https://images.pexels.com/photos/1393996/pexels-photo-1393996.jpeg?auto=compress&cs=tinysrgb&h=350',NULL),
+	(2,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536499657529-2d09e5c71539?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ccc131c58f5da1e893e2605dda9de842&auto=format&fit=crop&w=500&q=60',NULL),
+	(3,'Example project','Here is a short desctiption of one of my projects','https://images.unsplash.com/photo-1536506252322-a4cb9cae8655?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=79ac811fe55d39710f4d9d6cb2ac1d27&auto=format&fit=crop&w=500&q=60',NULL),
+	(4,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(5,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(6,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(7,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(8,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(9,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(10,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL);
+
+/*!40000 ALTER TABLE `projects` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 

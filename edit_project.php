@@ -11,7 +11,7 @@
     <input type="text" name="mini_description" value=""> Mini description<br/>
     <input type="text" name="background_image" value=""> Background image<br/>
     <input type="text" name="project_url" value=""> Project URL<br/>
-    <input type="submit" value="Create new project">
+    <input type="submit" value="Edit existing project">
 </form>
 
 </body>

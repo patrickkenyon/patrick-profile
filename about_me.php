@@ -14,13 +14,16 @@ $about_me_data = $stmt->fetchAll();
 <body>
 
     <form method="post" action="about_me.php">
-        <input type="text" name="bio_header" value="$stmt[0][1]"> Bio title<br/>
-        <input type="text" name="bio" value=""> Bio<br/>
-        <input type="text" name="contact_title" value=""> Contact title<br/>
-        <input type="email" name="email" value=""> Email<br/>
-        <input type="tel" name="telephone" value=""> Telephone<br/>
+        <input type="text" name="bio_title" value=<?php echo $about_me_data[0]["bio_title"] ?>> Bio title<br/>
+        <input type="text" name="bio" value=<?php echo $about_me_data[0]["bio"] ?>> Bio<br/>
+        <input type="text" name="contact_title" value="<?php echo $about_me_data[0]["contact_title"] ?>"> Contact title<br/>
+        <input type="email" name="email" value="<?php echo $about_me_data[0]["email"] ?>"> Email<br/>
+        <input type="tel" name="telephone" value="<?php echo $about_me_data[0]["telephone"] ?>"> Telephone<br/>
         <input type="submit" value="Approve Changes">
     </form>
 
 </body>
 </html>
+
+<?php
+

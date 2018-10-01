@@ -1,3 +1,13 @@
+<?php
+
+$db = new PDO("mysql:dbname=portfolio;host=127.0.0.1", 'root');
+$db->SetAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+
+$stmt = $db->query("SELECT `bio_title`,`bio`,`contact_title`,`email`,`telephone` FROM `about_me`;");
+$about_me_data = $stmt->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

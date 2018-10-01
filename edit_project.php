@@ -18,12 +18,12 @@ $projects_data = $stmt->fetchAll();
 </head>
 <body>
 
-    <form method="post" action="submit_edit_project.php">
+    <form method="POST" action="submit_edit_project.php">
         <input type="text" name="title" value="<?php echo $projects_data[0]["title"] ?>"> Title<br/>
         <textarea rows="15" cols="50" name="bio"><?php echo $projects_data[0]["mini_description"] ?></textarea> Mini description<br/>
         <input type="text" name="contact_title" value="<?php echo $projects_data[0]["background_image"] ?>"> Background image<br/>
         <input type="email" name="email" value="<?php echo $projects_data[0]["project_url"] ?>"> Project url<br/>
-        <input type="submit" name="submit" value="Edit existing projects">
+        <input type="submit" value="Edit existing projects">
     </form>
 
 </body>

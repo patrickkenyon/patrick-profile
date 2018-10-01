@@ -3,7 +3,7 @@
 $db = new PDO("mysql:dbname=portfolio;host=127.0.0.1", 'root');
 $db->SetAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
 
-$stmt = $db->query("SELECT `id`,`title`,`mini_description`,`background_image`,`project_url` FROM `projects`;");
+$stmt = $db->query("SELECT `id`,`title`FROM `projects`;");
 $projects_data = $stmt->fetchAll();
 
 ?>

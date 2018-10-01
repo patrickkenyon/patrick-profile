@@ -16,11 +16,11 @@ $content_data = $stmt->fetchAll();
 </head>
 <body>
 
-<form method="post" action="submit_content.php">
+<form method="POST" action="submit_content.php">
     Name<input type="text" name="name" value="<?php echo $content_data[0]["name"] ?>"><br/>
     Sub title<input type="text" name="sub_title" value="<?php echo $content_data[0]["sub_title"] ?>"><br/>
     Tagline<textarea rows="15" cols="50" name="tagline"><?php echo $content_data[0]["tagline"] ?></textarea><br/>
-    <input type="submit" name="submit" value="Approve Changes">
+    <input type="submit" value="Approve Changes">
 </form>
 
 </body>

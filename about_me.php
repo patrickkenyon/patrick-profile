@@ -16,7 +16,7 @@ $about_me_data = $stmt->fetchAll();
 </head>
 <body>
 
-    <form method="post" action="submit_about_me.php">
+    <form method="POST" action="submit_about_me.php">
         <input type="text" name="bio_title" value="<?php echo $about_me_data[0]["bio_title"] ?>"> Bio title<br/>
         <textarea rows="15" cols="50" name="bio"><?php echo $about_me_data[0]["bio"] ?></textarea> Bio<br/>
         <input type="text" name="contact_title" value="<?php echo $about_me_data[0]["contact_title"] ?>"> Contact title<br/>

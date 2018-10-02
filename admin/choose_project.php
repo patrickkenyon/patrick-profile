@@ -17,12 +17,12 @@ $projects_data = $stmt->fetchAll();
 <body>
 
     <form method="GET" action="edit_project.php">
-        Select a project to edit <select name="id">
+        <p>Select a project to edit</p><select name="id">
             <?php
             foreach ($projects_data as $project) { ?>
-                <option value=<?php echo $project['id']?>><?php echo $project['title']; ?></option>
+                <option value="<?php echo $project['id']?>"><?php echo $project['title']; ?></option>
             <?php } ?>
-        </select><br/>
+        </select><br/><br/>
         <input type="submit" value="Choose project">
     </form>
 

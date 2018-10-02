@@ -17,10 +17,10 @@ $projects_data = $stmt->fetch();
 <body>
 
 <form method="POST" action="submit_add_project.php" enctype="multipart/form-data">
-    Title: <input type="text" name="title" placeholder="Please enter the project title"><br/>
-    Mini description: <textarea rows="15" cols="50" name="mini_description" placeholder="Please enter a description of the project here."></textarea><br/>
-    Upload image: <input type="file" name="background_image"><br/>
-    Project url: <input type="text" name="project_url" placeholder="Please provide a link to the project here"><br/>
+    <p>Title</p><input type="text" name="title" placeholder="Project title">
+    <p>Mini description</p><textarea rows="15" cols="50" name="mini_description" placeholder="Please enter a description of the project here."></textarea>
+    <p>Upload image</p><input type="file" name="background_image">
+    <p>Project url</p><input type="text" name="project_url" placeholder="Project url"><br/><br/>
     <input type="submit" value="Add new project">
 </form>
 

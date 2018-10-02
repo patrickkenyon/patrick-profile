@@ -17,11 +17,11 @@ $about_me_data = $stmt->fetch();
 <body>
 
     <form method="POST" action="submit_about_me.php">
-        Bio title: <input type="text" name="bio_title" value="<?php echo $about_me_data["bio_title"] ?>"><br/>
-        Bio: <textarea rows="15" cols="50" name="bio"><?php echo $about_me_data["bio"] ?></textarea><br/>
-        Contact title: <input type="text" name="contact_title" value="<?php echo $about_me_data["contact_title"] ?>"><br/>
-        Email: <input type="email" name="email" value="<?php echo $about_me_data["email"] ?>"><br/>
-        Telephone: <input type="tel" name="telephone" value="<?php echo $about_me_data["telephone"] ?>"><br/>
+        <p>Bio title</p><input type="text" name="bio_title" value="<?php echo $about_me_data["bio_title"] ?>">
+        <p>Bio</p><textarea rows="15" cols="50" name="bio"><?php echo $about_me_data["bio"] ?></textarea>
+        <p>Contact title</p><input type="text" name="contact_title" value="<?php echo $about_me_data["contact_title"] ?>">
+        <p>Email</p><input type="email" name="email" value="<?php echo $about_me_data["email"] ?>">
+        <p>Telephone</p><input type="tel" name="telephone" value="<?php echo $about_me_data["telephone"] ?>"><br/><br/>
         <input type="submit" name="submit" value="Approve Changes">
     </form>
 

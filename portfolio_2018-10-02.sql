@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-10-01 10:33:32 +0000
+# Generation Time: 2018-10-02 12:20:33 +0000
 # ************************************************************
 
 
@@ -89,16 +89,16 @@ LOCK TABLES `projects` WRITE;
 
 INSERT INTO `projects` (`id`, `title`, `mini_description`, `background_image`, `project_url`)
 VALUES
-	(1,'Example project','Here is a short desctiption of one of my projects.','https://images.pexels.com/photos/1393996/pexels-photo-1393996.jpeg?auto=compress&cs=tinysrgb&h=350',NULL),
-	(2,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536499657529-2d09e5c71539?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ccc131c58f5da1e893e2605dda9de842&auto=format&fit=crop&w=500&q=60',NULL),
-	(3,'Example project','Here is a short desctiption of one of my projects','https://images.unsplash.com/photo-1536506252322-a4cb9cae8655?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=79ac811fe55d39710f4d9d6cb2ac1d27&auto=format&fit=crop&w=500&q=60',NULL),
-	(4,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
-	(5,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
-	(6,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
-	(7,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
-	(8,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
-	(9,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
-	(10,'Example project','Here is a short desctiption of one of my projects.','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL);
+	(1,'Example project 1','Here is a short desctiption of one of my projects. 1','https://images.pexels.com/photos/1393996/pexels-photo-1393996.jpeg?auto=compress&cs=tinysrgb&h=350',NULL),
+	(2,'Example project 2','Here is a short desctiption of one of my projects. 2','https://images.unsplash.com/photo-1536499657529-2d09e5c71539?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ccc131c58f5da1e893e2605dda9de842&auto=format&fit=crop&w=500&q=60',NULL),
+	(3,'Example project 3','Here is a short desctiption of one of my projects 3','https://images.unsplash.com/photo-1536506252322-a4cb9cae8655?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=79ac811fe55d39710f4d9d6cb2ac1d27&auto=format&fit=crop&w=500&q=60',NULL),
+	(4,'Example project 4','Here is a short desctiption of one of my projects. 4','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(5,'Example project 5','Here is a short desctiption of one of my projects. 5','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(6,'Example project 6','Here is a short desctiption of one of my projects. 6','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(7,'Example project 7','Here is a short desctiption of one of my projects. 7','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(8,'Example project 8','Here is a short desctiption of one of my projects. 8','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(9,'Example project 9','Here is a short desctiption of one of my projects. 9','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL),
+	(10,'Example project 10','Here is a short desctiption of one of my projects. 10','https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97d54d56f7e8c363cda42b6651896f68&auto=format&fit=crop&w=500&q=60',NULL);
 
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;

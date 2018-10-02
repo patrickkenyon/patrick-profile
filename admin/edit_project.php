@@ -19,10 +19,10 @@ $projects_data = $stmt->fetchAll();
 <body>
 
     <form method="POST" action="submit_edit_project.php">
-        <input type="text" name="title" value="<?php echo $projects_data[0]["title"] ?>"> Title<br/>
-        <textarea rows="15" cols="50" name="bio"><?php echo $projects_data[0]["mini_description"] ?></textarea> Mini description<br/>
-        <input type="text" name="contact_title" value="<?php echo $projects_data[0]["background_image"] ?>"> Background image<br/>
-        <input type="email" name="email" value="<?php echo $projects_data[0]["project_url"] ?>"> Project url<br/>
+        Title: <input type="text" name="title" value="<?php echo $projects_data[0]["title"] ?>"><br/>
+        Mini description: <textarea rows="15" cols="50" name="mini_description"><?php echo $projects_data[0]["mini_description"] ?></textarea><br/>
+        Background image: <input type="file" name="background_image" value="<?php echo $projects_data[0]["background_image"] ?>"><br/>
+        Project url: <input type="text" name="project_url" value="<?php echo $projects_data[0]["project_url"] ?>"><br/>
         <input type="submit" value="Edit existing projects">
     </form>
 

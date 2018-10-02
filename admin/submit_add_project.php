@@ -1,10 +1,21 @@
 <?php
-$target_dir = "/sites/academy-php7/html/patrick-profile/uploads/";
+
+require 'functions.php';
+
+$db = connectDatabase();
+
+if (
+    (empty($_POST["title"])) ||
+    (empty($_POST["mini_description"])) ||
+    (empty($_POST["background_image"]))
+) {
+    exit ('Please enter values title, mini description and background image.');
+}
+
+$target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["background_image"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
@@ -45,3 +56,13 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
+$stmt = $db->prepare(
+"INSERT INTO `projects` 
+          VALUES `title` = :title,`mini_description` = :mini_description, `background_image` = :background_image, `project_url` = :project_url");
+
+$stmt->bindParam(':title', $_POST["title"]);
+$stmt->bindParam(':mini_description', $_POST["mini_description"]);
+$stmt->bindParam(':background_image', $target_file);
+$stmt->bindParam(':background_image', $_POST["project_url"]);
+$stmt->execute();

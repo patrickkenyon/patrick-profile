@@ -3,11 +3,9 @@
 require 'functions.php';
 
 if (
-    (empty($_POST["name"])) ||
-    (empty($_POST["sub_title"])) ||
-    (empty($_POST["tagline"]))
+    (empty($_POST["name"]))
 ) {
-    exit ('Please enter values for all fields');
+    exit ('Please enter a value for name');
 }
 
 $db = connectDatabase();

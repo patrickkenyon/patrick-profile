@@ -1,7 +1,25 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: academy
- * Date: 01/10/2018
- * Time: 13:16
- */
+
+require 'functions.php';
+
+if (
+    (empty($_POST["name"])) ||
+    (empty($_POST["sub_title"])) ||
+    (empty($_POST["tagline"]))
+) {
+    exit ('Please enter values for all fields');
+}
+
+$db = connectDatabase();
+
+$stmt = $db->prepare(
+    "UPDATE `content` 
+              SET `name` = :name1,`sub_title` = :sub_title,`tagline` = :tagline 
+              WHERE `id` = 1;");
+
+$stmt->bindParam(':name1', $_POST["name"]);
+$stmt->bindParam(':sub_title', $_POST["sub_title"]);
+$stmt->bindParam(':tagline', $_POST["tagline"]);
+$stmt->execute();
+
+header('location:content.php');

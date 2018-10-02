@@ -1,11 +1,23 @@
 <?php
 
+require 'functions.php';
+
+if (
+    (empty($_POST["bio_title"])) ||
+    (empty($_POST["bio"])) ||
+    (empty($_POST["contact_title"])) ||
+    (empty($_POST["email"])) ||
+    (empty($_POST["telephone"]))
+) {
+    exit ('Please enter values for all fields');
+}
+
+$db = connectDatabase();
+
 $stmt2 = $db->prepare(
     "UPDATE `about_me` 
                   SET `bio_title` = :bio_title,`bio` = :bio,`contact_title` = :contact_title,`email` = :email, `telephone` = :telephone 
                   WHERE `id` = 1;");
-
-empyt()
 
 $stmt2->bindParam(':bio_title', $_POST["bio_title"]);
 $stmt2->bindParam(':bio', $_POST["bio"]);

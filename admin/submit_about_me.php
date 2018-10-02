@@ -9,15 +9,16 @@ if (
     (empty($_POST["email"])) ||
     (empty($_POST["telephone"]))
 ) {
+    echo "<a href='about_me.php'>Back</a></br>";
     exit ('Please enter values for all fields');
 }
 
 $db = connectDatabase();
 
 $stmt = $db->prepare(
-    "UPDATE `about_me` 
-              SET `bio_title` = :bio_title,`bio` = :bio,`contact_title` = :contact_title,`email` = :email, `telephone` = :telephone 
-              WHERE `id` = 1;");
+    "UPDATE `about_me`
+    SET `bio_title` = :bio_title,`bio` = :bio,`contact_title` = :contact_title,`email` = :email, `telephone` = :telephone 
+    WHERE `id` = 1;");
 
 $stmt->bindParam(':bio_title', $_POST["bio_title"]);
 $stmt->bindParam(':bio', $_POST["bio"]);

@@ -12,14 +12,18 @@ $content_data = $stmt->fetch();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Content</title>
 </head>
 <body>
 
 <form method="POST" action="submit_content.php">
-    <p>Name</p><input type="text" name="name" value="<?php echo $content_data["name"] ?>">
-    <p>Sub title</p><input type="text" name="sub_title" value="<?php echo $content_data["sub_title"] ?>">
-    <p>Tagline</p><textarea rows="15" cols="50" name="tagline"><?php echo $content_data["tagline"] ?></textarea><br/><br/>
+    <label>Name</label>
+    <input type="text" name="name" value="<?php echo $content_data["name"] ?>">
+    <label>Sub title</label>
+    <input type="text" name="sub_title" value="<?php echo $content_data["sub_title"] ?>">
+    <label>Tagline</label>
+    <textarea rows="15" cols="50" name="tagline"><?php echo $content_data["tagline"] ?></textarea><br/><br/>
     <input type="submit" value="Approve Changes">
 </form>
 

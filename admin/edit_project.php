@@ -4,8 +4,9 @@ require 'functions.php';
 
 $db = connectDatabase();
 
-$data = $_GET["id"];
-$stmt = $db->query("SELECT `id`,`title`,`mini_description`,`background_image`,`project_url` FROM `projects` WHERE `id` =". $data .";");
+$stmt = $db->prepare("SELECT `id`,`title`,`mini_description`,`background_image`,`project_url` FROM `projects` WHERE `id` = :id ;");
+$stmt->bindParam(':id', $_GET["id"]);
+$stmt->execute();
 $projects_data = $stmt->fetchAll();
 
 ?>
@@ -14,15 +15,20 @@ $projects_data = $stmt->fetchAll();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Edit project</title>
 </head>
 <body>
 
-    <form method="POST" action="submit_edit_project.php">
-        <p>Title</p><input type="text" name="title" value="<?php echo $projects_data[0]["title"] ?>"><br/>
-        <p>Mini description</p><textarea rows="15" cols="50" name="mini_description"><?php echo $projects_data[0]["mini_description"] ?></textarea><br/>
-        <p>Background image</p><input type="file" name="background_image" value="<?php echo $projects_data[0]["background_image"] ?>"><br/>
-        <p>Project url</p><input type="text" name="project_url" value="<?php echo $projects_data[0]["project_url"] ?>"><br/><br/>
+    <form method="POST" action="submit_edit_project.php?id=<?php echo $_GET['id']; ?>">
+        <label>Title</label>
+        <input type="text" name="title" value="<?php echo $projects_data[0]["title"]; ?>"><br/>
+        <label>Mini description</label>
+        <textarea rows="15" cols="50" name="mini_description"><?php echo $projects_data[0]["mini_description"] ?></textarea><br/>
+        <label>Background image</label>
+        <input type="file" name="background_image" value="<?php echo $projects_data[0]["background_image"] ?>"><br/>
+        <label>Project url</label>
+        <input type="text" name="project_url" value="<?php echo $projects_data[0]["project_url"] ?>"><br/><br/>
         <input type="submit" value="Edit existing projects">
     </form>
 

@@ -4,14 +4,6 @@ require 'functions.php';
 
 $db = connectDatabase();
 
-if (
-    (empty($_POST["title"])) ||
-    (empty($_POST["mini_description"])) ||
-    (empty($_POST["background_image"]))
-) {
-    exit ('Please enter values title, mini description and background image.');
-}
-
 $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["background_image"]["name"]);
 $uploadOk = 1;
@@ -35,7 +27,7 @@ if (file_exists($target_file)) {
     $uploadOk = 0;
 }
 // Check file size
-if ($_FILES["background_image"]["size"] > 5000000) {
+if ($_FILES["background_image"]["size"] > 2000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
@@ -57,12 +49,20 @@ if ($uploadOk == 0) {
     }
 }
 
+if (
+    (empty($_POST["title"])) ||
+    (empty($_POST["mini_description"])) ||
+    (empty($target_file))
+) {
+    exit ('Please enter values for title, mini description and background image.');
+}
+
 $stmt = $db->prepare(
-"INSERT INTO `projects` 
-          VALUES `title` = :title,`mini_description` = :mini_description, `background_image` = :background_image, `project_url` = :project_url");
+    "INSERT INTO `projects` (`title`,`mini_description`,`background_image`,`project_url`)
+    VALUES (:title, :mini_description, :background_image, :project_url);");
 
 $stmt->bindParam(':title', $_POST["title"]);
 $stmt->bindParam(':mini_description', $_POST["mini_description"]);
 $stmt->bindParam(':background_image', $target_file);
-$stmt->bindParam(':background_image', $_POST["project_url"]);
+$stmt->bindParam(':project_url', $_POST["project_url"]);
 $stmt->execute();

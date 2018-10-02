@@ -2,9 +2,7 @@
 
 require 'functions.php';
 
-if (
-    (empty($_POST["name"]))
-) {
+if (empty($_POST["name"])) {
     exit ('Please enter a value for name');
 }
 

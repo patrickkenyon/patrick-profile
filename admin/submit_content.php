@@ -3,6 +3,7 @@
 require 'functions.php';
 
 if (empty($_POST["name"])) {
+    echo "<a href='content.php'>Back</a></br>";
     exit ('Please enter a value for name');
 }
 

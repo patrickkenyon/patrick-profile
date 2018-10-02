@@ -51,6 +51,7 @@ if (!file_exists($target_file)) {
         (empty($_POST["mini_description"])) ||
         (empty($target_file))
     ) {
+        echo "<a href='edit_project.php'>Back</a></br>";
         exit ('Please enter values for title, mini description and background image.');
     }
 }

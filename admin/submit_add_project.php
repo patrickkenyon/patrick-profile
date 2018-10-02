@@ -54,6 +54,7 @@ if (
     (empty($_POST["mini_description"])) ||
     (empty($target_file))
 ) {
+    echo "<a href='add_project.php'>Back</a></br>";
     exit ('Please enter values for title, mini description and background image.');
 }
 

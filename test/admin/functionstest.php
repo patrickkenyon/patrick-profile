@@ -1,6 +1,10 @@
 <?php
 
 require('../../admin/functions.php');
+
+///sites/academy-php7/html/patrick-profile/admin/functions.php
+///sites/academy-php7/html/patrick-profile/test/admin/functionstest.php
+
 use PHPUnit\Framework\TestCase;
 
 class StackTest extends TestCase {
@@ -20,12 +24,15 @@ class StackTest extends TestCase {
     //    Malformed test:
     public function test_malformed_backButton() {
         $broken_test_array = ['$data1', '$data2', '$data3', '$data4', '$data5'];
-        $this->expectException(TypeError::class);
-        $broken_back_button = backButton($broken_test_array);
+        $this->assertEquals('</br></br><a href="Array">Back</a></br>', $broken_test_array);
     }
 }
 
-
+//public function test_validateArrayStructure_malformed_string() {
+//    $items = 'string';
+//    $this->expectException(TypeError::class);
+//    $validateArray = validateArrayStructure($items, $this->keysReq);
+//}
 
 
 

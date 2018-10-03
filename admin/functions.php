@@ -11,14 +11,28 @@ function connectDatabase() {
     return $db;
 }
 
+/*
+ * this function creates a redirect button to the desired page
+ *
+ * @param string @redirect_path is a user defined string
+ *
+ * @return void
+*/
 function backButton ($redirect_path) {
-    echo "<a href=$redirect_path>Back</a></br>";
+    return "</br></br><a href=$redirect_path>Back</a></br>";
 }
 
-function validateData($data) {
-    empty($data);
-}
-
+/*
+ * this function checks whether the user has submitted values for all required fields when creating or editing a project.
+ * if these values exist then the script continues, if false then a redirect button and warning message appear.
+ *
+ * @param string $title is a user defined string
+ * @param string $description is a user defined string
+ * @param string $image is a user defined string
+ * @param string $redirect_path is a user defined string
+ *
+ * @return void
+*/
 function projectDataCheck($title, $description, $image, $redirect_path) {
     if (
         empty($title) ||

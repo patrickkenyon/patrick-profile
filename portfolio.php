@@ -1,3 +1,25 @@
+<?php
+
+require 'admin/functions.php';
+
+$db = connectDatabase();
+
+$stmt = $db->query(
+    "SELECT `id`,`title`, `mini_description`, `background_image`, `project_url` 
+    FROM `projects`;");
+$projects_data = $stmt->fetchAll();
+
+$stmt2 = $db->query(
+    "SELECT `id`, `bio_title`, `bio`, `contact_title`, `email`, `telephone`
+    FROM `about_me`;");
+$about_me_data = $stmt2->fetchAll();
+
+$stmt3 = $db->query(
+    "SELECT `id`, `name`, `sub_title`, `tagline`
+    FROM `content`;");
+$content_data = $stmt3->fetchAll();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,19 +39,23 @@
     </header>
 
     <section class="mini-profile">
-        <h1>Patrick Kenyon</h1>
-        <strong>Putting the 'junior' in Junior Web Developer</strong>
-        <p>I am a fledgling developer at the start of my career, hungry to learn and to prove myself within a supportive company.</p>
+        <h1><?php echo $content_data[0]["name"]; ?></h1>
+        <strong><?php echo $content_data[0]["sub_title"]; ?></strong>
+        <p><?php echo $content_data[0]["tagline"]; ?></p>
     </section>
 
     <section id="portfolio" class="project-holder">
-        <div class="project project1">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
+        <?php foreach($project as $projects_data) { ?>
+            <div class="project" style="background-image: url("");">
+                <div class="project-over">
+                    <h3><?php echo $projects_data[0]["title"]; ?></h3>
+                    <p>Example text for my example project</p>
+                    <p>More example text for my example project</p>
+                </div>
             </div>
-        </div>
+        <?php } ;?>
+
+
         <div class="project project2">
             <div class="project-over">
                 <h3>Example project</h3>
@@ -83,16 +109,14 @@
 
     <section class="about-me-holder">
         <div id="aboutme" class="about-me">
-            <h2>About me</h2>
-            <p>With a background in education and project management I have a strong communication and organisational skill set.
-                I am currently cutting my teeth in the world of coding with Mayden Academy, a highly regarded coding academy based in Bath.
-                Through personal study and my education with Mayden Academy I have experience of HTML5 and CSS.
+            <h2><?php echo $about_me_data[0]["bio_title"]; ?></h2>
+            <p><?php echo $about_me_data[0]["bio"]; ?>
             </p>
         </div>
         <div id="contact" class="contact-info">
-            <h2>Contact info</h2>
-            Email: <a href="mailto:patrick.kenyon@gmail.com">patrick.kenyon@gmail.com</a><br>
-            Telephone: <a href="tel:+447814742276">+447814742276</a>
+            <h2><?php echo $about_me_data[0]["contact_title"]; ?></h2>
+            Email: <a href="mailto:<?php echo $about_me_data[0]["email"]; ?>"><?php echo $about_me_data[0]["email"]; ?></a><br>
+            Telephone: <a href="tel:<?php echo $about_me_data[0]["telephone"]; ?>"><?php echo $about_me_data[0]["telephone"]; ?></a>
         </div>
     </section>
 

@@ -1,9 +1,10 @@
 <?php
+
 require 'functions.php';
 
 $db = connectDatabase();
 
-projectDataCheck($_POST["title"], $_POST["mini_description"],$target_file,'choose_project.php');
+projectDataCheck($_POST["title"], $_POST["mini_description"],$_FILES["background_image"]["name"],'choose_project.php');
 
 $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["background_image"]["name"]);
@@ -42,15 +43,16 @@ if (!file_exists($target_file)) {
         // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["background_image"]["tmp_name"], $target_file)) {
-            echo "The file " . basename($_FILES["background_image"]["name"]) . " has been uploaded.";
+            echo "The file " . basename($_FILES["background_image"]["name"]) . " has been uploaded.</br>";
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
     }
 }
+
 $stmt = $db->prepare(
     "UPDATE `projects`
-    SET `title` = :title, `mini_description` = :mini_description, 
+    SET `title` = :title, `mini_description` = :mini_description,
     `background_image` = :background_image, `project_url` = :project_url
     WHERE `id` = :id;");
 
@@ -60,3 +62,6 @@ $stmt->bindParam(':mini_description', $_POST["mini_description"]);
 $stmt->bindParam(':background_image', $target_file);
 $stmt->bindParam(':project_url', $_POST["project_url"]);
 $stmt->execute();
+
+echo 'The project has been successfully edited';
+echo backButton('choose_project.php');

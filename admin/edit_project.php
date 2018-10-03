@@ -20,7 +20,7 @@ $projects_data = $stmt->fetchAll();
 </head>
 <body>
 
-    <form method="POST" action="submit_edit_project.php?id=<?php echo $_GET['id']; ?>">
+    <form method="POST" action="submit_edit_project.php?id=<?php echo $_GET['id']; ?>" enctype="multipart/form-data">
         <label>Title</label>
         <input type="text" name="title" value="<?php echo $projects_data[0]["title"]; ?>"><br/>
         <label>Mini description</label>

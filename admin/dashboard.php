@@ -13,6 +13,7 @@
     <a href="content.php"> Content</a><br/><br/>
     <a href="choose_project.php"> Project (edit existing)</a><br/><br/>
     <a href="add_project.php"> Project (create new)</a><br/><br/>
+    <?php echo backButton('dashboard.php'); ?>
 
 </body>
 </html>

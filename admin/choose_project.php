@@ -26,6 +26,7 @@ $projects_data = $stmt->fetchAll();
             <?php } ?>
         </select><br/><br/>
         <input type="submit" value="Choose project">
+        <?php echo backButton('dashboard.php'); ?>
     </form>
 
 </body>

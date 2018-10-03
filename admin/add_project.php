@@ -27,6 +27,7 @@ $projects_data = $stmt->fetch();
     <label>Project url</label>
     <input type="text" name="project_url" placeholder="Project url"><br/><br/>
     <input type="submit" value="Add new project">
+    <?php echo backButton('dashboard.php'); ?>
 </form>
 
 </body>

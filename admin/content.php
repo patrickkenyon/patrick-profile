@@ -25,6 +25,7 @@ $content_data = $stmt->fetch();
     <label>Tagline</label>
     <textarea rows="15" cols="50" name="tagline"><?php echo $content_data["tagline"] ?></textarea><br/><br/>
     <input type="submit" value="Approve Changes">
+    <?php echo backButton('dashboard.php'); ?>
 </form>
 
 </body>

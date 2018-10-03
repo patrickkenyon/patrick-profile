@@ -4,6 +4,8 @@ require 'functions.php';
 
 $db = connectDatabase();
 
+projectDataCheck($_POST["title"], $_POST["mini_description"],$target_file,'add_project.php');
+
 $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["background_image"]["name"]);
 $uploadOk = 1;
@@ -47,15 +49,6 @@ if ($uploadOk == 0) {
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
-}
-
-if (
-    (empty($_POST["title"])) ||
-    (empty($_POST["mini_description"])) ||
-    (empty($target_file))
-) {
-    echo "<a href='add_project.php'>Back</a></br>";
-    exit ('Please enter values for title, mini description and background image.');
 }
 
 $stmt = $db->prepare(

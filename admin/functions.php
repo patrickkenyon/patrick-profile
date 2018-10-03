@@ -11,6 +11,21 @@ function connectDatabase() {
     return $db;
 }
 
+function backButton ($redirect_path) {
+    echo "<a href=$redirect_path>Back</a></br>";
+}
+
 function validateData($data) {
     empty($data);
+}
+
+function projectDataCheck($title, $description, $image, $redirect_path) {
+    if (
+        empty($title) ||
+        empty($description) ||
+        empty($image)
+    ) {
+        echo "<a href=$redirect_path>Back</a></br>";
+        exit ('Please enter values for title, mini description and background image.');
+    }
 }

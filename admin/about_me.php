@@ -29,6 +29,7 @@ $about_me_data = $stmt->fetch();
         <label>Telephone</label>
         <input type="tel" name="telephone" value="<?php echo $about_me_data["telephone"] ?>"><br/><br/>
         <input type="submit" name="submit" value="Approve Changes">
+        <?php echo backButton('dashboard.php'); ?>
     </form>
 
 </body>

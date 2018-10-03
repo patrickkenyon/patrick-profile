@@ -19,6 +19,10 @@ $stmt3 = $db->query(
     FROM `content`;");
 $content_data = $stmt3->fetchAll();
 
+if (count($projects_data) % 2 !== 0) {
+    array_shift($projects_data);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,57 +61,6 @@ $content_data = $stmt3->fetchAll();
                 </div>
             </a>
         <?php } ;?>
-
-<!---->
-<!--        <div class="project project2">-->
-<!--            <div class="project-over">-->
-<!--                <h3>Example project</h3>-->
-<!--                <p>Example text for my example project</p>-->
-<!--                <p>More example text for my example project</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="project project3">-->
-<!--            <div class="project-over">-->
-<!--                <h3>Example project</h3>-->
-<!--                <p>Example text for my example project</p>-->
-<!--                <p>More example text for my example project</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="project project4">-->
-<!--            <div class="project-over">-->
-<!--                <h3>Example project</h3>-->
-<!--                <p>Example text for my example project</p>-->
-<!--                <p>More example text for my example project</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="project project5">-->
-<!--            <div class="project-over">-->
-<!--                <h3>Example project</h3>-->
-<!--                <p>Example text for my example project</p>-->
-<!--                <p>More example text for my example project</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="project project6">-->
-<!--            <div class="project-over">-->
-<!--                <h3>Example project</h3>-->
-<!--                <p>Example text for my example project</p>-->
-<!--                <p>More example text for my example project</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="project project7">-->
-<!--            <div class="project-over">-->
-<!--                <h3>Example project</h3>-->
-<!--                <p>Example text for my example project</p>-->
-<!--                <p>More example text for my example project</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="project project8">-->
-<!--            <div class="project-over">-->
-<!--                <h3>Example project</h3>-->
-<!--                <p>Example text for my example project</p>-->
-<!--                <p>More example text for my example project</p>-->
-<!--            </div>-->
-<!--        </div>-->
     </section>
 
     <section class="about-me-holder">

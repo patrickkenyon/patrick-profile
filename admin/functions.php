@@ -33,11 +33,12 @@ function backButton ($redirect_path) {
  *
  * @return void
 */
-function projectDataCheck($title, $description, $image, $redirect_path) {
+function projectDataCheck($title, $description, $image, $project_url, $redirect_path) {
     if (
         empty($title) ||
         empty($description) ||
-        empty($image)
+        empty($image) ||
+        empty($project_url)
     ) {
         echo "<a href=$redirect_path>Back</a></br>";
         exit ('Please enter values for title, mini description and background image.');

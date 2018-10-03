@@ -45,66 +45,69 @@ $content_data = $stmt3->fetchAll();
     </section>
 
     <section id="portfolio" class="project-holder">
-        <?php foreach($project as $projects_data) { ?>
-            <div class="project" style="background-image: url("");">
-                <div class="project-over">
-                    <h3><?php echo $projects_data[0]["title"]; ?></h3>
-                    <p>Example text for my example project</p>
-                    <p>More example text for my example project</p>
+        <?php foreach($projects_data as $project) { ?>
+             <a href="<?php echo $project["project_url"]; ?>">
+                <div class="project" style="background-image: url('<?php echo $project["background_image"]; ?>');">
+                    <div class="project-over">
+                        <div class="centre-text">
+                            <h3><?php echo $project["title"]; ?></h3>
+                            <p><?php echo $project["mini_description"]; ?></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </a>
         <?php } ;?>
 
-
-        <div class="project project2">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
-            </div>
-        </div>
-        <div class="project project3">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
-            </div>
-        </div>
-        <div class="project project4">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
-            </div>
-        </div>
-        <div class="project project5">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
-            </div>
-        </div>
-        <div class="project project6">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
-            </div>
-        </div>
-        <div class="project project7">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
-            </div>
-        </div>
-        <div class="project project8">
-            <div class="project-over">
-                <h3>Example project</h3>
-                <p>Example text for my example project</p>
-                <p>More example text for my example project</p>
-            </div>
-        </div>
+<!---->
+<!--        <div class="project project2">-->
+<!--            <div class="project-over">-->
+<!--                <h3>Example project</h3>-->
+<!--                <p>Example text for my example project</p>-->
+<!--                <p>More example text for my example project</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="project project3">-->
+<!--            <div class="project-over">-->
+<!--                <h3>Example project</h3>-->
+<!--                <p>Example text for my example project</p>-->
+<!--                <p>More example text for my example project</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="project project4">-->
+<!--            <div class="project-over">-->
+<!--                <h3>Example project</h3>-->
+<!--                <p>Example text for my example project</p>-->
+<!--                <p>More example text for my example project</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="project project5">-->
+<!--            <div class="project-over">-->
+<!--                <h3>Example project</h3>-->
+<!--                <p>Example text for my example project</p>-->
+<!--                <p>More example text for my example project</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="project project6">-->
+<!--            <div class="project-over">-->
+<!--                <h3>Example project</h3>-->
+<!--                <p>Example text for my example project</p>-->
+<!--                <p>More example text for my example project</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="project project7">-->
+<!--            <div class="project-over">-->
+<!--                <h3>Example project</h3>-->
+<!--                <p>Example text for my example project</p>-->
+<!--                <p>More example text for my example project</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="project project8">-->
+<!--            <div class="project-over">-->
+<!--                <h3>Example project</h3>-->
+<!--                <p>Example text for my example project</p>-->
+<!--                <p>More example text for my example project</p>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
 
     <section class="about-me-holder">

@@ -18,7 +18,7 @@ function connectDatabase() {
  *
  * @return void
 */
-function backButton ($redirect_path) {
+function backButton (string $redirect_path) {
     return "</br></br><a href=$redirect_path>Back</a></br>";
 }
 
@@ -41,6 +41,6 @@ function projectDataCheck($title, $description, $image, $project_url, $redirect_
         empty($project_url)
     ) {
         echo "<a href=$redirect_path>Back</a></br>";
-        exit ('Please enter values for title, mini description and background image.');
+//        exit ('Please enter values for title, mini description and background image.');
     }
 }

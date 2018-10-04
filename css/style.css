@@ -59,9 +59,11 @@ header {
     flex-wrap: wrap;
     text-align: center;
     list-style: none;
+
 }
 
-.project {
+.project-holder a {
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -74,26 +76,41 @@ header {
     flex-grow: 1;
     -ms-flex-positive: 1;
     flex-basis: 50%;
-    -ms-flex-preferred-size: 25%;
+    -ms-flex-preferred-size: 50%;
+}
+
+.project {
+    width: 100%;
     color: #fff;
     background-image: url("https://placekitten.com/700/300");
     background-size: cover;
     min-height: 300px;
     background-position: center;
     position: relative;
-    padding: 0 15px;
     border: solid black 1px;
+}
+
+.project .project-over {
+
+    height: 100%;
+    position: relative;
+}
+
+.project-over .centre-text {
+    padding: 1px; /* to contain margin elements */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 35px;
 }
 
 .project:hover .project-over {
     background: rgba(0,0,0,0.3);
-    height: 100%;
-    width: 100%;
     color: rgba(212,175,55,1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0 15px;
 }
 
 .project1 {
@@ -138,6 +155,14 @@ header {
     width: 270px;
 }
 
+
+@media only screen and (min-width: 1200px) {
+    .project-holder a {
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     header {
         display: -webkit-box;
@@ -150,7 +175,7 @@ header {
         padding: 4px;
         border: solid #000 1px;
     }
-    .project {
+    .project-holder a {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }

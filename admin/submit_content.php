@@ -1,6 +1,7 @@
 <?php
 
 require 'functions.php';
+require 'validate_login.php';
 
 if (empty($_POST["name"])) {
     echo "<a href='content.php'>Back</a></br>";

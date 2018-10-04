@@ -1,10 +1,11 @@
 <?php
 
 session_start();
-if(!$_SESSION['loggedIn']) {
-    header('Location: index.php');
+if(!$_SESSION['loggedIn'] || empty($_SESSION['LoggedIn'])) {
+    header('Location: ../login/home_login.php');
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>

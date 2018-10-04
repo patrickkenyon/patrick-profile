@@ -1,6 +1,7 @@
 <?php
 
 require 'functions.php';
+require 'validate_login.php';
 
 $db = connectDatabase();
 $stmt = $db->query("SELECT `id`,`title`FROM `projects`;");

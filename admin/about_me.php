@@ -1,6 +1,7 @@
 <?php
 
 require 'functions.php';
+require 'validate_login.php';
 
 $db = connectDatabase();
 $stmt = $db->query("SELECT `bio_title`,`bio`,`contact_title`,`email`,`telephone` FROM `about_me`;");

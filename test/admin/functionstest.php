@@ -2,9 +2,6 @@
 
 require('../../admin/functions.php');
 
-///sites/academy-php7/html/patrick-profile/admin/functions.php
-///sites/academy-php7/html/patrick-profile/test/admin/functionstest.php
-
 use PHPUnit\Framework\TestCase;
 
 class StackTest extends TestCase {

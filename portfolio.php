@@ -19,6 +19,7 @@ $stmt3 = $db->query(
     FROM `content`;");
 $content_data = $stmt3->fetchAll();
 
+// this if statement is to ensure that the number of projects displayed is always even in order to display correctly.
 if (count($projects_data) % 2 !== 0) {
     array_shift($projects_data);
 }

@@ -33,7 +33,7 @@ function backButton (string $redirect_path) {
  *
  * @return void
 */
-function projectDataCheck($title, $description, $image, $project_url, $redirect_path) {
+function projectDataCheck(string $title, string $description, string $image, string $project_url, string $redirect_path) {
     if (
         empty($title) ||
         empty($description) ||
@@ -41,6 +41,38 @@ function projectDataCheck($title, $description, $image, $project_url, $redirect_
         empty($project_url)
     ) {
         echo "<a href=$redirect_path>Back</a></br>";
-//        exit ('Please enter values for title, mini description and background image.');
+        exit ('Please enter values for title, mini description and background image.');
     }
 }
+
+/*
+ * this function creates a drop down list with all the current projects in the db with the associated names and project id's
+ *
+ * @param array $projects_data is a string drawn from the db with a select statement containing project id's and associated project names.
+ *
+ * @return string which takes the form of a drop down select.
+*/
+function projectDropDown(array $projects_data) {
+    $output = '<select name="id">';
+        foreach ($projects_data as $project) {
+            $output .= '<option value="' .  $project['id'] . '">' .  $project['title'] . '</option>';
+        }
+    $output .= '</select><br/><br/>';
+    return $output;
+}
+
+//function projectDropDown($projects_data) {
+//
+//    $output = '<select name="id">';
+//
+//    foreach ($projects_data as $project) {
+//        if (!empty($projects_data['id']) && !empty($projects_data['title'])) {
+//            $output .= '<option value="' .  $project['id'] . '">' .  $project['title'] . '</option>';
+//        } else {
+//            return FALSE;
+//        }
+//    }
+//    $output .= '</select><br/><br/>';
+//    return $output;
+//}
+

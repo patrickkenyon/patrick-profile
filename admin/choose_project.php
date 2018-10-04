@@ -24,23 +24,13 @@ $projects_data = $stmt->fetchAll();
 
     <form method="GET" action="edit_project.php">
         <label>Select a project to <strong>EDIT</strong></label>
-        <select name="id">
-            <?php
-            foreach ($projects_data as $project) { ?>
-                <option value="<?php echo $project['id']?>"><?php echo $project['title']; ?></option>
-            <?php } ?>
-        </select><br/><br/>
+            <?php echo projectDropDown($projects_data) ?>
         <input type="submit" value="Choose project">
     </form>
 
     <form method="POST" action="delete_project.php" onsubmit="return confirmationBox();">
         <label>Select a project to <strong>DELETE</strong></label>
-        <select name="id">
-            <?php
-            foreach ($projects_data as $project) { ?>
-                <option value="<?php echo $project['id']?>"><?php echo $project['title']; ?></option>
-            <?php } ?>
-        </select><br/><br/>
+            <?php echo projectDropDown($projects_data) ?>
         <input type="submit" value="Delete project">
         <?php echo backButton('dashboard.php'); ?>
     </form>

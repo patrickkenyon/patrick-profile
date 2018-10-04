@@ -12,6 +12,3 @@
     </form>
 </body>
 </html>
-<?php
-
-echo password_hash('keepcalm', PASSWORD_DEFAULT);

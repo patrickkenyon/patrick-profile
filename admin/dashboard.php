@@ -1,6 +1,6 @@
 <?php
 
-require ('validate_login.php');
+require 'validate_login.php';
 
 ?>
 
@@ -20,8 +20,6 @@ require ('validate_login.php');
     <a href="choose_project.php"> Project (edit or delete existing)</a><br/><br/>
     <a href="add_project.php"> Project (create new)</a><br/><br/>
     <a href="../login/log_out.php"> LOG OUT</a><br/><br/>
-    <?php echo backButton('dashboard.php'); ?>
-
 
 </body>
 </html>

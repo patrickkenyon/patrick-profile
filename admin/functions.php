@@ -60,19 +60,3 @@ function projectDropDown(array $projects_data) {
     $output .= '</select><br/><br/>';
     return $output;
 }
-
-//function projectDropDown($projects_data) {
-//
-//    $output = '<select name="id">';
-//
-//    foreach ($projects_data as $project) {
-//        if (!empty($projects_data['id']) && !empty($projects_data['title'])) {
-//            $output .= '<option value="' .  $project['id'] . '">' .  $project['title'] . '</option>';
-//        } else {
-//            return FALSE;
-//        }
-//    }
-//    $output .= '</select><br/><br/>';
-//    return $output;
-//}
-

@@ -8,4 +8,3 @@ if(password_verify($_POST['password'], '$2y$10$HCUDMjzVnzRKz/8lBvfSlOEsKIGTkwUgC
 } else {
     header('Location: home_login.php?error=1');
 }
-

@@ -15,7 +15,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if file already exists
 if (!file_exists($target_file)) {
-
+echo 1;
     // Check file size
     if ($_FILES["background_image"]["size"] > 2000000) {
         $uploadOk = 0;

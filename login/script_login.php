@@ -2,7 +2,7 @@
 session_start();
 
 
-if(password_verify($_POST['password'], '$2y$10$HCUDMjzVnzRKz/8lBvfSlOEsKIGTkwUgC7eVCEvfPjVgxDBoWr8a2') && ($_POST['username'] == 'patrickkenyon')) {
+if(password_verify($_POST['password'], '$2y$10$lVtUeoVH5NdRs92WxygAguRBm2G3ie1mXplJm4Oi8OJ50sUtPB4E2') && ($_POST['username'] == 'patrickkenyon')) {
     $_SESSION['loggedIn'] = TRUE;
     header('Location: ../admin/dashboard.php');
 } else {

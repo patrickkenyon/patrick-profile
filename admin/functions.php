@@ -6,7 +6,7 @@
  * @return resource the database connection.
 */
 function connectDatabase() {
-    $db = new PDO("mysql:dbname=portfolio;host=127.0.0.1", 'root');
+    $db = new PDO("mysql:dbname=patrick_portfolio;host=127.0.0.1", 'root');
     $db->SetAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
     return $db;
 }
